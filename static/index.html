@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello Angular Elements</title>
+  </head>
+  <body>
+    <app-my-counter></app-my-counter>
+    <script src="/dist/angular-elements-counter/main-es2015.js"></script>
+    <script src="/dist/angular-elements-counter/polyfills-es2015.js"></script>
+    <script src="/dist/angular-elements-counter/runtime-es2015.js"></script>
+    <script src="/dist/angular-elements-counter/scripts.js"></script>
+    <script>
+      const counterElement = document.querySelector('app-my-counter');
+      counterElement.addEventListener('valueChanged', ev => {
+        console.log(`count: ${ev.detail}`);
+      });
+    </script>
+  </body>
+</html>
